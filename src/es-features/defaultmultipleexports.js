@@ -7,14 +7,14 @@ import heroes, { owners } from "../data/heroes";
 //the find array method returns the first element of the calling array that matchs the callback
 //if there is no match, returns undefined
 // the callback here says that hero id must be equal to the passed id argument
-const getHeroeById = id => {
+export const getHeroeById = id => {
     return heroes.find(h => h.id === id)
 }
 
 //the filter array method returns a new array thats contains all the elements that matched the callback
 //this callback is called predicate too
 //if there are not matchs, the returned array will be empty
-const getHeroesByOwner = ownr => {
+export const getHeroesByOwner = ownr => {
     return heroes.filter(h => h.owner === ownr)
 }
 
